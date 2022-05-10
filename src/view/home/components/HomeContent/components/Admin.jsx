@@ -98,7 +98,7 @@ const Admin = () => {
             }}
           >
             {
-              list.filter(item => item.status === 1).map((item, index) => {
+              list.map((item, index) => {
                 return <List.Item key={item.id}>
                   <Space>
                     <div style={{color: '#007ac6', fontSize: 18}} >{index+1}</div>
