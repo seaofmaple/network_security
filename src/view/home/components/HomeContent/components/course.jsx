@@ -153,16 +153,16 @@ const Course = () => {
           width: 280
         }}
         onSelect={(item) => {
-          setSelect(courseList.filter(v => v.videoUrl === item.key)[0]);
+          setSelect(courseList.filter(v => v.courseName === item.key)[0]);
         }}
-        selectedKeys={select.videoUrl}
+        selectedKeys={select.courseName}
       >
         {
-          courseList.map(item => {
+          courseList.map((item, index) => {
             return <Menu.Item 
-              key={item.videoUrl}
+              key={item.courseName}
               >
-              {item.courseName}
+              {index+1}.{item.courseName}
             </Menu.Item>
           })
         }
